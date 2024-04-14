@@ -16,17 +16,14 @@ docker-compose up -d
 ```
 
 **Acceder a Moodle:** \
-`http://localhost:8080` \
-Iniciar sesión: \
+Url: `http://localhost:8080` \
 Usuario: `admin` \
 Contraseña: `passw0rd!` 
 
 **Acceder a phpMyAdmin** \
-`http://localhost:8081` \
-Iniciar sesión: \
+Url: `http://localhost:8081` \
 Usuario: `root` \
 Contraseña: `moodle` 
-
 
 ### Comandos útiles
 
