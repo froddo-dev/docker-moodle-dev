@@ -52,6 +52,6 @@ Docker: `https://docs.docker.com/compose/` \
 Moodle: `https://docs.moodle.org/` 
 
 **Notas:** 
-- Las contraseñas y usuarios se pueden configurar puertos y otras opciones modificando el archivo docker-compose.yml. \
+- Las contraseñas y usuarios se pueden configurar puertos y otras opciones modificando el archivo docker-compose.yml. 
 
 **Con este repositorio y los comandos mencionados, puedes crear y administrar de manera eficiente tu entorno de desarrollo local de Moodle utilizando Docker Compose.**
