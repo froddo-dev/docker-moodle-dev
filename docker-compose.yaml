@@ -1,0 +1,46 @@
+version: '3'
+
+services:
+  mariadb:
+    image: mariadb
+    volumes:
+      - ./configs/databases/moodle:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=moodle
+      - MYSQL_ROOT_USER=root
+      - MYSQL_DATABASE=moodle
+    networks:
+      - moodle-network
+
+  moodle:
+    image: bitnami/moodle:latest
+    ports:
+      - 8080:8080
+      - 8443:8443
+    environment:
+      - MOODLE_DATABASE_HOST=mariadb
+      - MOODLE_DATABASE_USER=root
+      - MOODLE_DATABASE_PASSWORD=moodle
+      - MOODLE_DATABASE_NAME=moodle
+      - MOODLE_USERNAME=admin
+      - MOODLE_PASSWORD=passw0rd!
+    volumes:
+      - ./configs/moodle:/bitnami/moodle
+      - ./configs/moodledata:/bitnami/moodledata
+    depends_on:
+      - mariadb
+    networks:
+      - moodle-network
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - 8081:80
+    environment:
+      - PMA_HOST=mariadb
+    networks:
+      - moodle-network
+
+networks:
+  moodle-network:
+    driver: bridge
