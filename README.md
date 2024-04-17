@@ -1,7 +1,11 @@
 
 
 ## Moodle con Docker Compose
-Este repositorio te permite ejecutar una instancia local de Moodle utilizando Docker Compose, facilitando el desarrollo y las pruebas de tu entorno Moodle.
+Este repositorio te permite ejecutar una instancia local del LMS Moodle utilizando Docker Compose, Este entorno incluye:
+
+- MariaDB como base de datos
+- Moodle version 4.3.3
+- phpMyAdmin para gestionar la base de datos
 
 ## Instrucciones
 
@@ -15,15 +19,15 @@ git clone https://github.com/froddo-dev/docker-moodle-dev.git
 docker-compose up -d
 ```
 
-**Acceder a Moodle:** \
-Url: `http://localhost:8080` \
-Usuario: `admin` \
-Contraseña: `passw0rd!` 
+### Acceder a Moodle:
+- Url: `http://localhost:8080` 
+- Usuario: `admin` 
+- Contraseña: `passw0rd!` 
 
-**Acceder a phpMyAdmin** \
-Url: `http://localhost:8081` \
-Usuario: `root` \
-Contraseña: `moodle` 
+### Acceder a phpMyAdmin
+- Url: `http://localhost:8081` 
+- Usuario: `root` 
+- Contraseña: `moodle` 
 
 ### Comandos útiles
 
@@ -47,11 +51,11 @@ docker-compose ps
 docker-compose logs -f
 ```
 
-### Documentación:
-Docker: `https://docs.docker.com/compose/` \
-Moodle: `https://docs.moodle.org/` 
+## Documentación
+- Docker: [Documentación Docker Compose](https://docs.docker.com/compose/)
+- Moodle: [Documentación Moodle](https://docs.moodle.org/)
+- MariaDB: [Documentación MariaDB](https://mariadb.com/kb/en/documentation/)
 
-**Notas:** 
+## Notas:
 - Las contraseñas, usuarios, puertos y otras opciones se pueden configurar modificando el archivo docker-compose.yml. 
-
-**Con este repositorio y los comandos mencionados, puedes crear y administrar de manera eficiente tu entorno de desarrollo local de Moodle utilizando Docker Compose.**
+- Con este repositorio y los comandos mencionados, puedes crear y administrar de manera eficiente tu entorno de desarrollo local del LMS Moodle utilizando Docker Compose.
